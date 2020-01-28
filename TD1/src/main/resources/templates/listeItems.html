@@ -1,0 +1,9 @@
+{{> /header}}
+    <h2>Liste des elements</h2>
+    <ul>
+    {{#items}}
+        <li>{{nom}} <p>Evalutation:</p> {{evalutation}}</li>
+    {{/items}}
+    </ul>
+    <a href="/items/addNew" class="ui button">Ajouter</a>
+{{> /footer}}

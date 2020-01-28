@@ -5,9 +5,9 @@ public class Element {
     private String nom;
     private String evaluation;
 
-    public Element(String nom, String evaluation){
+    public Element(String nom){
         this.nom = nom;
-        this.evaluation = evaluation;
+
     }
 
     public String getNom(){
