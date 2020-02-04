@@ -4,16 +4,19 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Organization {
+public class Groupe {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
 
     private String name;
-    private String domain;
+    private String email;
     private String aliases;
 
-    @OneToMany(cascade= CascadeType.ALL,mappedBy="organization")
-    private List<Groupe> groupes;
+    @ManyToMany
+    private Organization organization;
 
+    @ManyToMany
+    @JoinTable(name = "user_group")
+    private List<User> users;
 }
