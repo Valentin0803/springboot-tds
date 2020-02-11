@@ -12,8 +12,13 @@ public class Organization {
     private String name;
     private String domain;
     private String aliases;
+    private String organizationSettings;
 
     @OneToMany(cascade= CascadeType.ALL,mappedBy="organization")
     private List<Groupe> groupes;
+
+    /*@OneToMany(cascade= CascadeType.ALL,mappedBy="organization")
+    private List<User> users;*/
+
 
 }

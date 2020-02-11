@@ -7,6 +7,6 @@ import s4.spring.td2.entities.Organization;
 import java.util.List;
 
 public interface GroupeRepositorie extends JpaRepository<Groupe, Integer> {
-    List<Organization> findByDomain(String domain);
+    List<Organization> findById(String id);
     List<Organization> findByName(String name);
 }

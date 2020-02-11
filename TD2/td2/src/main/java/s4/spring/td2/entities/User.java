@@ -16,14 +16,14 @@ public class User {
     private String suspended;
 
     @ManyToMany
-    private Organization organization;
+    private List<Organization> organization;
 
     @ManyToMany(mappedBy="users")
     private List<Groupe> groupes;
 
 
 
-    public User(int id, String firstname, String lastname, String email, String password, String suspended, Organization organization, List<Groupe> groupes) {
+    public User(int id, String firstname, String lastname, String email, String password, String suspended, List<Organization> organization, List<Groupe> groupes) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;

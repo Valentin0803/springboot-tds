@@ -14,7 +14,7 @@ public class Groupe {
     private String aliases;
 
     @ManyToMany
-    private Organization organization;
+    private List<Organization> organization;
 
     @ManyToMany
     @JoinTable(name = "user_group")
