@@ -8,7 +8,7 @@ import s4.spring.td2.entities.User;
 import java.util.List;
 
 public interface UserRepositorie extends JpaRepository<User, Integer> {
-    List<Organization> findById(String domain);
-    List<Organization> findByFirstname(String firstname);
-    List<Organization> findByLastname(String lastname);
+    List<Organization> findById(int id);
+
+
 }

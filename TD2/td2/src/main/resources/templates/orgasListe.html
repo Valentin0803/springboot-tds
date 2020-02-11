@@ -1,3 +1,29 @@
 {{> /header}}
 <h2 class="ui header">Liste des organisations</h2>
+
+<button class="ui active button">
+    <a href="orgas/new">
+        <i class="plus"></i>
+        Ajouter une organisation
+    </a>
+</button>
+
+<table class="ui celled table">
+<tr>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Domaine</th>
+        <th>alias</th>
+    </thead>
+</tr>
+    {{#liste}}
+    <tr>
+        <th>{{id}}</th>
+        <th>{{name}}</th>
+        <th>{{domain}}</th>
+        <th>{{aliases}}</th>
+    </tr>
+    {{/liste}}
+</table>
 {{> /footer}}
