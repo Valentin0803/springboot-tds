@@ -1,3 +1,29 @@
 {{> /header}}
 
+<h2>Ajout d'une organisation</h2>
+
+<form action="/controleurs/OrgoControler" method="post">
+    <h4>Name</h4>
+    <div class="ui input">
+        <input type="text" name="nom" id="nom" placeholder="Nom de l'organisation">
+    </div>
+    <br>
+    <h4>Domain</h4>
+    <div class="ui input">
+        <input type="text" name="domain" id="domaine" placeholder="Domaine">
+    </div>
+    <br>
+    <h4>Aliases</h4>
+    <div class="ui input">
+        <input type="text" name="aliases" id="aliases" placeholder="Aliases">
+    </div>
+    <br>
+    <div class="ui raised segment">
+        <input type="submit" class="ui positive button" value="Sauvegarder">
+        <input type="button" class="ui button" value="Annuler">
+    </div>
+
+</form>
+
+
 {{> /footer}}

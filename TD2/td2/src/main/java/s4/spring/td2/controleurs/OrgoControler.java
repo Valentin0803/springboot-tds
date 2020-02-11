@@ -24,10 +24,15 @@ public class OrgoControler {
         return "orgasListe";
     }
 
+    @GetMapping("/orgas/new")
+    public String viewNewOrga(){
+        return "addOrganisation";
+    }
+
     @PostMapping("new")
     @ResponseBody
-    public String newOrga(Organization orga) {
-        repo.saveAndFlush(orga);
+    public String newOrga(Organization orga) {//, @RequestParam name, @RequestParam domaine
+        repo.save(orga);
         return orga+" ajoutée.";
     }
 }
